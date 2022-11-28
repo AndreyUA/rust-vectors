@@ -15,4 +15,17 @@ fn main() {
     v_mut.push(8);
 
     println!("This is mutable vector! {:?}", v_mut);
+
+    let v_for_access = vec![1, 2, 3, 4, 5, 6];
+
+    let third = &v_for_access[20];
+
+    println!("This is the third element of vector: {third}");
+
+    let third = v_for_access.get(2);
+
+    match third {
+        Some(third) => println!("The third element is {third}"),
+        None => println!("There is no third element"),
+    }
 }
